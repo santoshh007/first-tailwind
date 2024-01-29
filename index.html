@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <title>Ranker Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Light Mode Styles */
+      body.light-mode {
+        background-color: #ffffff;
+        color: #000000;
+      }
+
+      /* Dark Mode Styles */
+      body.dark-mode {
+        background-color: #1a1a1a;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body class="transition-colors duration-500">
+    <div class="container min-h-screen">
+      <!-- Dark Mode Toggle Switch -->
+      <div class="flex justify-end items-center p-4">
+        <label for="darkModeSwitch" class="flex items-center cursor-pointer">
+          <span class="mr-2" id="darkModeText">Dark Mode</span>
+          <input type="checkbox" id="darkModeSwitch" class="hidden" />
+          <span id="darkModeIcon" class="text-yellow-500">&#9728;</span>
+        </label>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="flex items-center mb-8">
+        <ul class="flex-1 text-center">
+          <li class="list-none inline-block px-5"><a href="#home">Home</a></li>
+          <li class="list-none inline-block px-5">
+            <a href="#about">About</a>
+          </li>
+          <li class="list-none inline-block px-5">
+            <a href="#services">Services</a>
+          </li>
+          <li class="list-none inline-block px-5">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Background Video Container -->
+      <div class="relative z-0">
+        <video
+          class="flex justify-center place-items-center w-full h-full object-center"
+          autoplay
+          loop
+          muted
+          playsinline
+        >
+          <source src="Travel Agency .mp4" type="video/mp4" ++++++++++ />
+        </video>
+      </div>
+
+      <!-- Hero Section -->
+      <section class="text-center mt-12">
+        <h1 class="text-4xl font-bold mb-4">Find Your Way</h1>
+        <p class="text-lg text-gray-500">
+          "Your Journey, Your Way: Uncover Unique Gems with TripAdvisor"
+        </p>
+      </section>
+      <div class="flex items-center justify-center mt-4">
+        <!-- Search Bar with Button -->
+        <div class="relative flex items-center">
+          <button
+            type="submit"
+            formaction="/Search"
+            class="bg-green-500 text-white p-2 rounded-l-md focus:outline-none"
+            title="Search"
+            aria-label="Search"
+          >
+            <!-- Changed color to green -->
+            <svg
+              viewBox="0 0 24 24"
+              width="24px"
+              height="24px"
+              class="fill-current"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.74 3.75a5.99 5.99 0 100 11.98 5.99 5.99 0 000-11.98zM2.25 9.74a7.49 7.49 0 1113.3 4.728l5.44 5.442-1.06 1.06-5.44-5.439A7.49 7.49 0 012.25 9.74z"
+              ></path>
+            </svg>
+          </button>
+          <input
+            type="search"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="none"
+            spellcheck="false"
+            required=""
+            name="q"
+            class="pl-2 pr-10 py-2 border rounded-r-md focus:outline-none"
+            placeholder="Places to go, things to do, hotels..."
+            title="Search"
+            role="searchbox"
+            aria-label="Search"
+            aria-controls="typeahead_results"
+            aria-autocomplete="list"
+            value=""
+          />
+        </div>
+        <!-- Additional Button -->
+        <button
+          class="bg-green-500 text-white px-4 py-2 rounded-md ml-2 focus:outline-none hover:bg-green-600 transition duration-300"
+          type="button"
+        >
+          <!-- Changed color to green -->
+          <span class="font-semibold">Search</span>
+        </button>
+      </div>
+
+      <!-- Services Section -->
+      <section class="mt-12">
+        <h2 class="text-2xl font-bold mb-4 text-center">Our Services</h2>
+        <div class="flex justify-around">
+          <!-- Service Card 1 -->
+          <div class="p-6 border rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-2">Guided Tours</h3>
+            <p>
+              Embark on unforgettable adventures with our expert guides,
+              exploring hidden gems and local wonders. Immerse yourself in the
+              culture and history of each destination, making every moment of
+              your trip truly special.
+            </p>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="p-6 border rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-2">Accommodation Finder</h3>
+            <p>
+              Discover a home away from home with our curated selection of
+              accommodations. From luxury resorts to cozy bed and breakfasts,
+              find the perfect place to stay that suits your preferences and
+              enhances your travel experience.
+            </p>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="p-6 border rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-2">
+              Local Cuisine Experiences
+            </h3>
+            <p>
+              Savor the flavors of each destination with our curated culinary
+              experiences. From street food to fine dining, explore the diverse
+              tastes of local cuisines, making your trip a delicious and
+              memorable journey.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form -->
+      <section class="mt-12">
+        <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+        <form class="max-w-md mx-auto">
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-medium text-gray-700"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="mt-1 p-2 border rounded-md w-full"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="mt-1 p-2 border rounded-md w-full"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block text-sm font-medium text-gray-700"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              class="mt-1 p-2 border rounded-md w-full"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-blue-500 text-white px-4 py-2 rounded-md"
+          >
+            Send Message
+          </button>
+        </form>
+      </section>
+    </div>
+    <!-- Social Media Icons -->
+    <div class="flex justify-center mt-8">
+      <a
+        href="#"
+        target="_blank"
+        title="Facebook"
+        class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white mx-2"
+      >
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a
+        href="#"
+        target="_blank"
+        title="Twitter"
+        class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white mx-2"
+      >
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a
+        href="#"
+        target="_blank"
+        title="Instagram"
+        class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white mx-2"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <!-- Add more social media icons as needed -->
+    </div>
+    <!-- Smooth Scroll Script -->
+    <script src="smooth-scroll.js"></script>
+    <!-- Dark Mode Toggle Script -->
+    <script src="dark-mode-switch.js"></script>
+  </body>
+</html>
